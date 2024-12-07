@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,10 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
 </head>
-<body>
-
-
-    
+<body onload="init()">
+    <h1>Tic Tac Toe</h1>
+    <div id="player-indicator">
+        <span id="circle-indicator" class="indicator">●</span>
+        <span id="cross-indicator" class="indicator">×</span>
+    </div>
+    <div id="mode-selection-overlay">
+        <h2>Wähle den Spielmodus</h2>
+        <button onclick="selectMode('single')">Einzelspieler</button> <br>
+        <button onclick="selectMode('multi')">Mehrspieler</button>
+    </div>
+    <div id="winner-overlay" style="display: none;">
+        <div id="winner-message"></div>
+    </div>
+    <div id="content"></div>
+    <div class="center mt-32">
+        <button onclick="restartGame()">Spiel neu starten</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
